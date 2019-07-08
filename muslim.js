@@ -26,11 +26,8 @@ function myFunction(){
                     .then(data =>{
                         console.log(data);
                         const {shurooq,dhuhr,asr,maghrib,isha} = data.items[0];
-                        loc.textContent = data.latitude+","+data.longitude
-                        deg.textContent = data.qibla_direction
-                        loctzone.textContent = data.timezone;
-
-                        seticon(icon,document.querySelector(".icon"))
+                        loc.textContent = data.latitude+","+data.longitude;
+                        deg.textContent = data.qibla_direction;
                     });
             })
         }
