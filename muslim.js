@@ -26,8 +26,13 @@ function myFunction(){
                     .then(data =>{
                         console.log(data);
                         const {shurooq,dhuhr,asr,maghrib,isha} = data.items[0];
-                        loc.textContent = data.latitude+","+data.longitude;
-                        deg.textContent = data.qibla_direction;
+                        loc.textContent = "coordinates : "+data.latitude+","+data.longitude;
+                        deg.textContent = "quibla direction : "+data.qibla_direction;
+                        s.textContent = "sobh : "+shurooq;
+                        d.textContent = "dhuhr : "+dhuhr;
+                        a.textContent = "asr : "+asr;
+                        m.textContent = "maghrib : "+maghrib;
+                        i.textContent = "isha : "+isha;
                     });
             })
         }
